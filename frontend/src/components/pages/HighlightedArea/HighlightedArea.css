@@ -3,23 +3,18 @@
     justify-content: space-around;
     padding-bottom: 11rem;
   }
+.ha-container{
+  background-color: azure;
+  padding-top: 2rem;
+}
+h1{
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
 
 @media(max-width:675px){
   .highlighted-area{
     flex-direction: column;   
   }
 }  
-
-
-
-.ha-container{
-  background-color: SEASHELL;
-  padding-top: 2rem;
-
-}
-
-  h1{
-    text-align: center;
-    margin-top: 5rem;
-    padding-bottom: 3rem;
-  }

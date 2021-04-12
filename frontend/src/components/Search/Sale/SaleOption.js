@@ -8,7 +8,10 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   form: {
     backgroundColor: "white",
-    width: "100%",
+    width: "98%",
+    border: "1px solid black",
+    borderTopLeftRadius: "1rem",
+    borderBottomLeftRadius: "1rem",
   },
 });
 
@@ -16,9 +19,13 @@ const SaleOption = ({ name }) => {
   const classes = useStyles();
 
   return (
-    <FormControl className={classes.form} variant="filled">
-      <InputLabel>Choose Option</InputLabel>
-      <Select name={name}>
+    <FormControl
+      className={classes.form}
+      variant="filled"
+      InputProps={{ disableUnderline: true }}
+    >
+      <InputLabel>Option</InputLabel>
+      <Select style={{}} name={name}>
         {purchaseDropdownItems.map((option) => (
           <MenuItem value={option.purchaseoption}>
             {option.purchaseoptionname}

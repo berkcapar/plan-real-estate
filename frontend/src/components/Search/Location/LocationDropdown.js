@@ -9,7 +9,9 @@ import { useState } from "react";
 const useStyles = makeStyles((theme) => ({
   form: {
     backgroundColor: "white",
-    width: "100%",
+    width: "98%",
+    border: "1px solid black",
+    borderRadius: "0.125rem",
   },
 }));
 
@@ -33,7 +35,7 @@ const LocationDropdown = ({ name }) => {
 
   return (
     <FormControl className={classes.form} variant="filled">
-      <InputLabel>Pick a Location</InputLabel>
+      <InputLabel>Location</InputLabel>
       <Select value={locationList} multiple onChange={handleChange} name={name}>
         {locationDropdownItems.map((option) => (
           <MenuItem

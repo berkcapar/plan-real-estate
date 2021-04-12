@@ -1,7 +1,8 @@
   .highlight-card{
   width: 23.5%;
-  border: 0.1rem solid gray;
+  border: 0.1rem solid lightgray;
   background-color: white;
+  border-radius: 1rem;
  }
 
  .highlight-card:hover{
@@ -16,6 +17,8 @@
     max-width: 447px;
     max-height: 300px;
     width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
 @media(max-width:675px){
   .highlight-card{

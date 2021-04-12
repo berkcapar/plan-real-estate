@@ -26,6 +26,7 @@ const useStyles = makeStyles({
       width: "100%",
       margin: "1rem auto",
       border: "1px solid red",
+      backgroundColor: "lightseagreen",
     },
   },
 });
@@ -67,9 +68,13 @@ const SearchArea = () => {
             <MaxBudgetOption name="maxpriceoption" />
           </div>
           <Button
+            style={{
+              backgroundColor: "lightseagreen",
+              color: "black",
+              fontWeight: "900",
+            }}
             className={classes.button}
             variant="contained"
-            color="secondary"
             type="submit"
           >
             SEARCH

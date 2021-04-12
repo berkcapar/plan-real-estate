@@ -8,11 +8,16 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   formmin: {
     backgroundColor: "white",
-    width: "50%",
+    width: "48%",
+    border: "1px solid black",
+    borderRadius: "0.125rem",
   },
   formmax: {
     backgroundColor: "white",
-    width: "50%",
+    width: "48%",
+    border: "1px solid black",
+    borderTopRightRadius: "1rem",
+    borderBottomRightRadius: "1rem",
   },
   "@media(max-width:675px)": {
     formmin: {
@@ -28,7 +33,7 @@ export const MinBudgetOption = ({ name }) => {
   const classes = useStyles();
   return (
     <FormControl className={classes.formmin} variant="filled">
-      <InputLabel>Minimum Budget</InputLabel>
+      <InputLabel>Min Budget</InputLabel>
       <Select name={name}>
         {minpriceDropdownItems.map((option) => (
           <MenuItem value={option.minpriceoption}>
@@ -43,7 +48,7 @@ export const MaxBudgetOption = ({ name }) => {
   const classes = useStyles();
   return (
     <FormControl className={classes.formmax} variant="filled">
-      <InputLabel>Maximum Budget</InputLabel>
+      <InputLabel>Max Budget</InputLabel>
       <Select name={name}>
         {maxpriceDropdownItems.map((option) => (
           <MenuItem value={option.maxpriceoption}>

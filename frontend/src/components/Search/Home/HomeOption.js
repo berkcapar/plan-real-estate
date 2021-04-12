@@ -8,7 +8,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   form: {
     backgroundColor: "white",
-    width: "100%",
+    width: "98%",
+    border: "1px solid black",
+    borderRadius: "0.125rem",
   },
 });
 
@@ -16,7 +18,7 @@ const HomeOption = ({ name }) => {
   const classes = useStyles();
   return (
     <FormControl className={classes.form} variant="filled">
-      <InputLabel>Choose Property</InputLabel>
+      <InputLabel>Property</InputLabel>
       <Select name={name}>
         {homeDropdownItems.map((option) => (
           <MenuItem value={option.homeoption}>{option.homeoptionname}</MenuItem>

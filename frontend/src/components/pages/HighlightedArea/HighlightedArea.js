@@ -4,7 +4,6 @@ import { getPropertiesFromState } from "../../../redux/selectors";
 import "./HighlightedArea.css";
 import { useEffect } from "react";
 import { initProperties } from "../../../redux/reducers/propertyReducer";
-import Typography from "@material-ui/core/Typography";
 
 const HighlightedArea = () => {
   const properties = useSelector(getPropertiesFromState);
