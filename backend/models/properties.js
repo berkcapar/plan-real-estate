@@ -4,6 +4,9 @@ const propertiesSchema = new mongoose.Schema({
   title: {
     type: String,
   },
+  description: {
+    type: String,
+  },
   option: {
     type: String,
   },
@@ -11,6 +14,9 @@ const propertiesSchema = new mongoose.Schema({
     type: String,
   },
   city: {
+    type: String,
+  },
+  adres: {
     type: String,
   },
   location: {
@@ -22,8 +28,23 @@ const propertiesSchema = new mongoose.Schema({
   m2: {
     type: Number,
   },
+  liveablem2: {
+    type: Number,
+  },
   roomnumber: {
     type: Number,
+  },
+  livingroomnumber: {
+    type: String,
+  },
+  bathnumber: {
+    type: String,
+  },
+  year: {
+    type: Number,
+  },
+  detailed: {
+    type: String,
   },
   photos: [
     {

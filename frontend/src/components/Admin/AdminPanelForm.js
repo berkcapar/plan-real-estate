@@ -7,7 +7,8 @@ import {
   purchaseDropdownItems,
   homeDropdownItems,
   maxroomDropdownItems,
-  maxsizeDropdownItems,
+  livingroomDropdownItems,
+  bathDropdownItems,
 } from "../Search/DropdownItems";
 import { Link, useHistory } from "react-router-dom";
 import Select from "@material-ui/core/Select";
@@ -59,7 +60,13 @@ const AdminPanelForm = () => {
               ))}
             </Select>
           </FormControl>
-          <TextField required name="title" label="Açıklama Ekleyin" />
+          <TextField required name="title" label="Başlık Ekleyin" />
+          <TextField
+            required
+            name="detailed"
+            label="Detaylı Açıklama Ekleyin"
+          />
+          <TextField required name="year" label="Yapılma Yılı" />
           <FormControl required>
             <InputLabel>Lokasyon Seçin</InputLabel>
             <Select name="city">
@@ -70,6 +77,7 @@ const AdminPanelForm = () => {
               ))}
             </Select>
           </FormControl>
+          <TextField required name="adres" label="Evin Açık Adresi" />
           <FormControl required>
             <InputLabel>Oda Sayısını Belirtin</InputLabel>
             <Select name="roomnumber">
@@ -80,22 +88,34 @@ const AdminPanelForm = () => {
               ))}
             </Select>
           </FormControl>
+          <FormControl required>
+            <InputLabel>Salon Sayısını Belirtin</InputLabel>
+            <Select name="livingroomnumber">
+              {livingroomDropdownItems.map((option) => (
+                <MenuItem key={option.id} value={option.livingroomoption}>
+                  {option.livingroomoption}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl required>
+            <InputLabel>Banyo Sayısını Belirtin</InputLabel>
+            <Select name="bathnumber">
+              {bathDropdownItems.map((option) => (
+                <MenuItem key={option.id} value={option.bathroomoption}>
+                  {option.bathroomoption}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
           <TextField
             required
             name="price"
             id="standard-basic"
             label="Fiyat €"
           />
-          <FormControl required>
-            <InputLabel>m2</InputLabel>
-            <Select name="m2">
-              {maxsizeDropdownItems.map((option) => (
-                <MenuItem key={option.id} value={option.maxsizeoption}>
-                  {option.maxsizeoption}m²
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+          <TextField required name="m2" label="Toplam m2" />
+          <TextField required name="liveablem2" label="Yaşanabilir m2" />
 
           <input
             style={{ display: "none" }}

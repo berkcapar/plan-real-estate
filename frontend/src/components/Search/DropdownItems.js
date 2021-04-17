@@ -4,6 +4,7 @@ export const locationDropdownItems = [
   { id: 3, locationname: "Bodrum", location: "Bodrum" },
   { id: 4, locationname: "Marmaris", location: "Marmaris" },
   { id: 5, locationname: "Kemer", location: "Kemer" },
+  { id: 6, locationname: "Kaş", location: "Kaş" },
 ];
 
 export const purchaseDropdownItems = [
@@ -55,12 +56,13 @@ export const maxroomDropdownItems = [
   { id: 3, maxroomoption: "3" },
   { id: 4, maxroomoption: "4" },
   { id: 5, maxroomoption: "5" },
-  { id: 6, maxroomoption: "7" },
-  { id: 7, maxroomoption: "8" },
-  { id: 8, maxroomoption: "9" },
-  { id: 9, maxroomoption: "10" },
-  { id: 10, maxroomoption: "11" },
-  { id: 11, maxroomoption: "12" },
+  { id: 6, maxroomoption: "6" },
+  { id: 7, maxroomoption: "7" },
+  { id: 8, maxroomoption: "8" },
+  { id: 9, maxroomoption: "9" },
+  { id: 10, maxroomoption: "10" },
+  { id: 11, maxroomoption: "11" },
+  { id: 12, maxroomoption: "12" },
 ];
 
 export const minsizeDropdownItems = [
@@ -133,4 +135,33 @@ export const maxsizeDropdownItems = [
   { id: "300m²", maxsizeoption: "300" },
   { id: "310m²", maxsizeoption: "310" },
   { id: "320m²", maxsizeoption: "320" },
+];
+
+export const livingroomDropdownItems = [
+  { id: 1, livingroomoption: "1" },
+  { id: 2, livingroomoption: "2" },
+  { id: 3, livingroomoption: "3" },
+  { id: 4, livingroomoption: "4" },
+  { id: 5, livingroomoption: "5" },
+  { id: 6, livingroomoption: "6" },
+  { id: 7, livingroomoption: "7" },
+  { id: 8, livingroomoption: "8" },
+  { id: 9, livingroomoption: "9" },
+  { id: 10, livingroomoption: "10" },
+  { id: 11, livingroomoption: "11" },
+  { id: 12, livingroomoption: "12" },
+];
+export const bathDropdownItems = [
+  { id: 1, bathroomoption: "1" },
+  { id: 2, bathroomoption: "2" },
+  { id: 3, bathroomoption: "3" },
+  { id: 4, bathroomoption: "4" },
+  { id: 5, bathroomoption: "5" },
+  { id: 6, bathroomoption: "6" },
+  { id: 7, bathroomoption: "7" },
+  { id: 8, bathroomoption: "8" },
+  { id: 9, bathroomoption: "9" },
+  { id: 10, bathroomoption: "10" },
+  { id: 11, bathroomoption: "11" },
+  { id: 12, bathroomoption: "12" },
 ];

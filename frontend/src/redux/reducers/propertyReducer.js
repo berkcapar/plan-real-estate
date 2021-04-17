@@ -1,5 +1,7 @@
 import propertyService from "../../services/property";
 
+const INITIAL_STATE = { status: "loading" };
+
 export const addProperty = (formData) => {
   return async (dispatch) => {
     const newProperty = await propertyService.addProperty(formData);
@@ -13,12 +15,18 @@ export const addProperty = (formData) => {
 
 export const initProperties = () => {
   return async (dispatch) => {
-    const data = await propertyService.getProperties();
-
-    dispatch({
-      type: "INIT_PROPERTIES",
-      data: data.properties,
-    });
+    try {
+      const data = await propertyService.getProperties();
+      dispatch({
+        type: "INIT_PROPERTIES_SUCCESS",
+        data: data.properties,
+      });
+    } catch (error) {
+      dispatch({
+        type: "INIT_PROPERTIES_FAILURE",
+        error,
+      });
+    }
   };
 };
 
@@ -44,12 +52,20 @@ export const searchProperty = (searchData) => {
   };
 };
 
-const propertyReducer = (state = [], action) => {
+const propertyReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "ADD_PROPERTY":
       return [...state, action.data];
-    case "INIT_PROPERTIES":
-      return action.data;
+    case "INIT_PROPERTIES_SUCCESS":
+      return {
+        status: "success",
+        data: action.data,
+      };
+    case "INIT_PROPERTIES_FAILURE":
+      return {
+        status: "failure",
+        error: action.error,
+      };
     case "DELETE_PROPERTY":
       return state.filter((property) => property.id !== action.data);
     case "SEARCH_PROPERTY":

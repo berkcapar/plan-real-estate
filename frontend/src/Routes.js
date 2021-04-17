@@ -9,6 +9,7 @@ import SearchResults from "./components/pages/SearchResults";
 import Navigation from "./components/Navigation/Navigation";
 import PropertyDetail from "./components/pages/PropertyDetail/PropertyDetail";
 import MakeaWish from "./components/pages/MakeaWish";
+import PropertyDetailContainer from "./components/pages/PropertyDetail/PropertyDetail";
 
 const Routes = () => {
   return (
@@ -57,7 +58,9 @@ const Routes = () => {
         <Route path="/properties/:id">
           <div className="test">
             <Navigation />
-            <PropertyDetail />
+            <div className="property-detail-container">
+              <PropertyDetailContainer />
+            </div>
           </div>
         </Route>
       </Switch>

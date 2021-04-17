@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
+  background-color: #dee0db;
   
 }
 @font-face {
@@ -293,8 +294,9 @@ code {
   border: 1px solid aliceblue;
   color:aliceblue;
   background-color:lightseagreen;
-  width: 45%;
+  width: 30%;
   margin: 2rem auto;
+  border-radius: 0.1rem;
 }
 .why-card-header,
 .why-card-text,
@@ -320,7 +322,12 @@ code {
     flex-direction: row;
   }
   .why-card{
-    width: 40%;
+    width: 30%;
+    border-radius: 1rem;
+  }
+  .why-card-image{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
 }
 
@@ -388,6 +395,7 @@ code {
 }
 
 @media(min-width:675px){
+ 
   .contact-area{
    display: flex;
    flex-direction: row;
@@ -403,5 +411,6 @@ code {
     width: 50%;
   }
 }
+
 
 /*contact area */

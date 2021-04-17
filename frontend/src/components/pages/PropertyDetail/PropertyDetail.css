@@ -1,5 +1,4 @@
 .detail-container{
- padding-top: 13%
 }
 
 .image-area{
@@ -8,7 +7,6 @@
 
 .icon-area{
     display: flex;
-    margin-left: 2rem;
 }
 .price{
     margin-left: 1.5rem;
@@ -18,27 +16,30 @@
 .room-area{
     padding-top: 0.3rem;
 }
-.contact {
+.contact-icon-container {
     padding-left: 2rem;
     display: flex;
 }
 .icon{
-    padding-left: 0.2rem;
+  
+    
 }
 .char-area{
     padding-top: 1rem;
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
+    border-right: 0.125rem solid gray;
 }
 .char-key{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.125rem solid gray;
 }
 .char-area p {
-    border-bottom: 0.1rem solid gray;
+   
 }
 .key-features{
    width: 40%;
@@ -70,10 +71,15 @@
 }
 
 @media(min-width:675px){
+    .detail-container{
+    padding-top: 13%;
+    width: 75%;
+    margin: 0 auto;
+    background-color: white;
+    }
     .image-area{
       display: flex;  
     }
-  
     .small-images{
         display: flex;
         flex-wrap: wrap;
@@ -83,34 +89,47 @@
         max-width: 300px;
         margin-top: 1rem;
         margin-left: 1rem;
-      
     }
     .big-image img{
         max-width: 501px;
     }
-    
     .big-image{
         width: 40%;
         margin-left: 2rem;
         margin-top: 1rem;
-        
+    }
+    .contact-icon-container {
+        border-bottom: 1px solid gray;
+        display: flex;
+       
+    }
+    .contact{
+        display: flex;
+        margin-left: 5rem;
+        align-items: center;
     }
     .title{
         margin-left: 2rem;
     }
-    .detail-container{
+    .detail-container {
         padding-top: 7%
        }
     .image-slider{
         display: none;
        }
     .button{
-       
         display:flex;
         justify-content:flex-end ;
         width:92%;
         margin-top:1rem
+    }
+    .key-features p{
+        width: 80%;
     }   
+    .icon{
+        padding-bottom: 1rem;
+        padding-left: 0.2rem;
+    }
 }
 
 

@@ -23,7 +23,11 @@ const getLocationForCity = (city) => {
         lat: 36.8571,
         lng: 28.2692,
       };
-
+    case "Kaş":
+      return {
+        lat: 36.2675,
+        lng: 29.4151,
+      };
     default:
       return {
         lat: 36.8571,
