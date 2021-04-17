@@ -15,42 +15,41 @@ import propertyService from "../../../services/property";
 import { initProperties } from "../../../redux/reducers/propertyReducer";
 import { getPropertiesFromState } from "../../../redux/selectors";
 
-//const PropertyAirports = ({ propertyId }) => {
-//const [state, setState] = useState({ status: "loading" });
+const PropertyAirports = ({ propertyId }) => {
+  const [state, setState] = useState({ status: "loading" });
 
-// useEffect(() => {
-// const fetchAirports = async (propertyId) => {
-// console.log(propertyId);
+  useEffect(() => {
+    const fetchAirports = async (propertyId) => {
+      console.log(propertyId);
 
-//try {
-//const { airports } = await propertyService.fetchAirports(propertyId);
-//setState({ status: "success", data: airports });
-//} catch (error) {
-// setState({ status: "failure", error });
-// }
-//};
+      try {
+        const { airports } = await propertyService.fetchAirports(propertyId);
+        setState({ status: "success", data: airports });
+      } catch (error) {
+        setState({ status: "failure", error });
+      }
+    };
 
-// fetchAirports(propertyId);
-// }, [propertyId]);
+    fetchAirports(propertyId);
+  }, [propertyId]);
 
-//switch (state.status) {
-//case "loading":
-//default:
-//return "Fetching airports...";
+  switch (state.status) {
+    case "loading":
+    default:
+      return "Fetching airports...";
+    case "success":
+      return (
+        <div>
+          {state.data.map((airport) => (
+            <div>{airport.name}</div>
+          ))}
+        </div>
+      );
 
-//case "success":
-//return (
-//  <div>
-//   {state.data.map((airport) => (
-//   <div>{airport.name}</div>
-// ))}
-// </div>
-// );
-
-//case "failure":
-// return state.error.message;
-//}
-//};
+    case "failure":
+      return state.error.message;
+  }
+};
 
 const PropertyDetail = ({ matchingProperty }) => {
   const [showSlider, setShowSlider] = useState(false);
@@ -138,7 +137,12 @@ const PropertyDetail = ({ matchingProperty }) => {
                 <p>Explore</p>
                 <ChevronRightIcon className="icon" />
               </div>
+              <div className="airports">
+                <h3>Nearest Airports</h3>
+                <PropertyAirports propertyId={matchingProperty.id} />
+              </div>
             </div>
+
             <div className="map">
               <Map location={matchingProperty.location} zoomLevel={17} />
             </div>
@@ -166,8 +170,7 @@ const PropertyDetail = ({ matchingProperty }) => {
 };
 
 const PropertyDetailContainer = () => {
-  const propertyDataState = useSelector(getPropertiesFromState());
-  console.log({ propertyDataState });
+  const propertyDataState = useSelector(getPropertiesFromState);
   const dispatch = useDispatch();
   let match = useRouteMatch("/properties/:id");
 

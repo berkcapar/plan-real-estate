@@ -11,7 +11,7 @@ const ImageSlider = ({ slides }) => {
   const length = slides.length;
   const id = useParams().id;
   const property = useSelector((state) =>
-    state.property.find((p) => p.id === id)
+    state.property.data.find((p) => p.id === id)
   );
 
   const nextSlide = () => {
